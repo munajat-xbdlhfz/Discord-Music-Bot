@@ -4,6 +4,7 @@ const Schema = require("../../Structures/Schemas/MusicChannelDB")
 const Buttons = require("../../Functions/ButtonFunctions")
 const queueEmbed = require("../../Functions/QueueFunctions")
 const playEmbed = require("../../Functions/PlayFunctions")
+const { setLeaveTimeout } = require("../../Functions/LeaveFunctions")
 
 module.exports = {
     id: "Stop",
@@ -24,6 +25,8 @@ module.exports = {
             return interaction.reply({content: "There is no songs in queue.", ephemeral: true});
 
             await queue.stop(VoiceChannel);
+
+            setLeaveTimeout(queue);
 
             Schema.findOne({ GuildID: guild.id }, async (err, data) => {
                 if (err) throw err;

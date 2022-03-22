@@ -4,6 +4,7 @@ const Schema = require("../../Structures/Schemas/MusicChannelDB")
 const Buttons = require("../../Functions/ButtonFunctions")
 const queueEmbed = require("../../Functions/QueueFunctions")
 const playEmbed = require("../../Functions/PlayFunctions")
+const { setLeaveTimeout, clearLeaveTimeout } = require("../../Functions/LeaveFunctions")
 
 module.exports.name = "distubeEvents"
 
@@ -17,6 +18,8 @@ client.distube.on("playSong", (queue, song) => {
     Schema.findOne({ GuildID: queue.id }, async (err, data) => {
         if (err) throw err;
         if (!data) return;
+
+        clearLeaveTimeout();
 
         return client.channels.cache.get(data.ChannelID).messages.fetch(data.EmbedID).then(msg => {
             msg.edit({
@@ -123,6 +126,8 @@ client.distube.on("finish", (queue) => {
     Schema.findOne({ GuildID: queue.id }, async (err, data) => {
         if (err) throw err;
         if (!data) return;
+
+        setLeaveTimeout(queue);
 
         return client.channels.cache.get(data.ChannelID).messages.fetch(data.EmbedID).then(msg => {
             msg.edit({

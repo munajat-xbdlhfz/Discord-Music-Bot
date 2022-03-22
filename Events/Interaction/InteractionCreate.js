@@ -18,28 +18,5 @@ module.exports = {
 
             command.execute(interaction, client)
         }
-
-        if (interaction.isSelectMenu()) {
-            const { customId, values, member } = interaction;
-            
-            if (customId !== "role-assign") return;
-            
-            if (customId === "role-assign") {
-                const component = interaction.component;
-                const removed = component.options.filter((option) => {
-                    return !values.includes(option.value)
-                })
-
-                for (const id of removed) {
-                    member.roles.remove(id.value)
-                }
-                
-                for (const id of values) {
-                    member.roles.add(id)
-                }
-
-                interaction.reply({embeds: [new MessageEmbed().setColor("GREEN").setDescription("✅ Roles have been updated!")], ephemeral: true})
-            }
-        }
     }
 }
