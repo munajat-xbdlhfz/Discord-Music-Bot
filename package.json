@@ -1,0 +1,29 @@
+{
+  "name": "music-discord-bot",
+  "version": "1.0.0",
+  "description": "Music Discord Bot",
+  "main": "main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "DARKZERO",
+  "license": "ISC",
+  "dependencies": {
+    "@discordjs/opus": "^0.7.0",
+    "@distube/soundcloud": "^1.1.0",
+    "@distube/spotify": "^1.2.1",
+    "@distube/yt-dlp": "^1.0.2",
+    "ascii-table": "^0.0.9",
+    "canvas": "^2.9.1",
+    "discord.js": "^13.6.0",
+    "distube": "^3.3.2",
+    "dotenv": "^16.0.0",
+    "ffmpeg-static": "^5.0.0",
+    "glob": "^7.2.0",
+    "libsodium-wrappers": "^0.7.9",
+    "mongoose": "^6.2.7",
+    "yt-search": "^2.10.3",
+    "ytdl-core": "^4.11.0"
+  }
+}
