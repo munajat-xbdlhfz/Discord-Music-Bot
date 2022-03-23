@@ -5,7 +5,6 @@ require('dotenv').config()
 
 module.exports = {
     name: "ready",
-    once: true,
     /**
      * 
      * @param {Client} client 
