@@ -24,12 +24,13 @@ npm i @distube/soundcloud
 ## Create .env File
 This bot is using .env, make sure you create your own .env file to use all function of this bot just like bellow.
 ```
-BOT_TOKEN = <your bot token>
-DATABASE_URL = <your mongoDB url>
+BOT_TOKEN = your bot token
+DATABASE_URL = your mongoDB url
 ```
 
 ## How To Use Music Command
-First use music settings slash command and pick Create Music Channel options. After music channel created, message the song name or just paste a link url (Youtube, Spotify, SoundCloud url). 
+First use music settings slash command and pick Create Music Channel options. After music channel created, message the song name or just paste a link url (Youtube, Spotify, SoundCloud url).
+![alt text](https://cdn.discordapp.com/attachments/914492895791308830/961015503537717279/unknown.png)
 
 ## Discord Music Bot Display
 When there is no song playing or no queue:
