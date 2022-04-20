@@ -86,6 +86,20 @@ client.distube.on("error", (queue, e) => {
     })
 })
 
+client.distube.on("disconnect", (queue) => {
+    Schema.findOne({ GuildID: queue.id }, async (err, data) => {
+        if (err) throw err;
+        if (!data) return;
+
+        return client.channels.cache.get(data.ChannelID).messages.fetch(data.EmbedID).then(msg => {
+            msg.edit({
+                embeds: [queueEmbed.execute(), playEmbed.execute()], 
+                components: [Buttons.execute()]
+            });
+        })
+    })
+})
+
 client.distube.on("empty", (queue) => {
     Schema.findOne({ GuildID: queue.id }, async (err, data) => {
         if (err) throw err;
