@@ -91,11 +91,18 @@ client.distube.on("disconnect", (queue) => {
         if (err) throw err;
         if (!data) return;
 
-        return client.channels.cache.get(data.ChannelID).messages.fetch(data.EmbedID).then(msg => {
+        client.channels.cache.get(data.ChannelID).messages.fetch(data.EmbedID).then(msg => {
             msg.edit({
                 embeds: [queueEmbed.execute(), playEmbed.execute()], 
                 components: [Buttons.execute()]
             });
+        })
+
+        return client.channels.cache.get(data.ChannelID).send({embeds: [new MessageEmbed()
+            .setColor("RED")
+            .setDescription("Disconnected from voice!")
+        ]}).then(msg => {
+            setTimeout(() => msg.delete(), 5000)
         })
     })
 })

@@ -13,6 +13,7 @@ client.commands = new Collection();
 client.buttons = new Collection();
 
 const { DisTube } = require("distube");
+const { YtDlpPlugin } = require("@distube/yt-dlp")
 const { SpotifyPlugin } = require("@distube/spotify");
 const { SoundCloudPlugin } = require("@distube/soundcloud");
 
@@ -24,6 +25,7 @@ client.distube = new DisTube(client, {
     emitNewSongOnly: true,
     emitAddSongWhenCreatingQueue: false,
     plugins: [
+        new YtDlpPlugin(),
         new SoundCloudPlugin(),
         new SpotifyPlugin({ emitEventsAfterFetching: true })
     ]
@@ -36,4 +38,4 @@ client.distube.setMaxListeners(0);
     require(`./Structures/Handlers/${handler}`)(client, PG, Ascii);
 });
 
-client.login(process.env.BOT_TOKEN)
+client.login(process.env.BOT_TOKEN_NEKO)
