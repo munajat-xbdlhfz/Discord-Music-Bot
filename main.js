@@ -38,4 +38,4 @@ client.distube.setMaxListeners(0);
     require(`./Structures/Handlers/${handler}`)(client, PG, Ascii);
 });
 
-client.login(process.env.BOT_TOKEN_NEKO)
+client.login(process.env.BOT_TOKEN)
