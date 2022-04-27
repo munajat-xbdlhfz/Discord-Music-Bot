@@ -1,13 +1,14 @@
-const { CommandInteraction, MessageEmbed } = require("discord.js")
+const { CommandInteraction, Client, MessageEmbed } = require("discord.js")
 
 module.exports = {
     name: "help",
     description: "Get help command.",
     /**
      * 
-     * @param {CommandInteraction} interaction 
+     * @param {CommandInteraction} interaction
+     * @param {Client} client 
      */
-    execute(interaction) {
+    execute(interaction, client) {
         const { guild } = interaction;
 
         const help = new MessageEmbed()
