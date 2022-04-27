@@ -20,6 +20,6 @@ module.exports = {
             { name: `/music settings`, value: `↪ Select option settings on music bot.` },
         )
 
-        interaction.send({embeds: help});
+        interaction.reply({embeds: help});
     }
 }
