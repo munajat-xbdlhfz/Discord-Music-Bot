@@ -15,6 +15,6 @@ module.exports = {
         .setTitle("Bot Status")
         .setDescription(`🟢 **Client Ping**: ${client.ws.ping}ms\n`)
         
-        interaction.reply({embeds: [Response]})
+        return interaction.reply({embeds: [Response]})
     }
 }
