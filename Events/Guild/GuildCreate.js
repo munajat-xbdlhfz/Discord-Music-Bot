@@ -39,7 +39,7 @@ module.exports = {
                 return [...accumulator, { id: r.id, permissions }]
             }, [])
 
-            await guild.commands.permissions.set({ fullPermissions });
+            // await guild.commands.permissions.set({ fullPermissions });
         })
     }
 }
