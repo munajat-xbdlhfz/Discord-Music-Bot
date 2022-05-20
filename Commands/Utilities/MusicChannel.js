@@ -7,7 +7,7 @@ const playEmbed = require("../../Functions/PlayFunctions")
 module.exports = {
     name: "music",
     description: "Complete music System.",
-    permission: "ADMINISTRATOR",
+    permission: "MANAGE_CHANNELS",
     options: [
         {
             name: "settings",
