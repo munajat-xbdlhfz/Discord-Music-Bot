@@ -17,7 +17,7 @@ module.exports = {
         if (!song) {
             playEmbed.setTitle("No song playing currently")
             playEmbed.setFooter({ text: `${client.user.username}` })
-            playEmbed.setImage("attachment://headset.png")
+            playEmbed.setImage("https://www.wallpaperuse.com/wallp/91-919178_m.jpgg")
         } else {
             playEmbed.setTitle(`${escapeMarkdown(song.name)} - [${song.formattedDuration}]`)
             playEmbed.setFooter({ text: `${client.user.username} | ${status(queue)}` })

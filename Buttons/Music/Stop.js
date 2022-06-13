@@ -35,7 +35,6 @@ module.exports = {
                 interaction.channel.messages.fetch(data.EmbedID).then(msg => {
                     msg.edit({
                         embeds: [queueEmbed.execute(), playEmbed.execute()], 
-                        files: [`./Structures/Images/headset.png`],
                         components: [Buttons.execute()]
                     });
                 });

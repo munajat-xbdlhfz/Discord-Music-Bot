@@ -153,7 +153,6 @@ client.distube.on("finish", (queue) => {
         return client.channels.cache.get(data.ChannelID).messages.fetch(data.EmbedID).then(msg => {
             msg.edit({
                 embeds: [queueEmbed.execute(), playEmbed.execute()], 
-                files: [`./Structures/Images/headset.png`],
                 components: [Buttons.execute()]
             });
         })

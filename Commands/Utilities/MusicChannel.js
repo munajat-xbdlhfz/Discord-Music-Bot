@@ -50,7 +50,6 @@ module.exports = {
     
                     client.channels.cache.get(channel.id).send({
                         embeds: [queueEmbed.execute(), playEmbed.execute()], 
-                        files: [`./Structures/Images/headset.png`],
                         components: [Buttons.execute()]
                     })
                     .then(async msg => {
