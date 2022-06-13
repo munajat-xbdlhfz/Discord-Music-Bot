@@ -1,8 +1,10 @@
-const { MessageEmbed } = require("discord.js")
+const { MessageEmbed, MessageAttachment } = require("discord.js")
 const client = require("../main")
 
 module.exports = {
     execute(queue, song) {
+        const attachment = new MessageAttachment("./Structures/Images/headset.png", 'headset.png');
+
         const playEmbed = new MessageEmbed()
         .setColor("AQUA")
 
@@ -17,7 +19,7 @@ module.exports = {
         if (!song) {
             playEmbed.setTitle("No song playing currently")
             playEmbed.setFooter({ text: `${client.user.username}` })
-            playEmbed.setImage("https://cdn.discordapp.com/attachments/954347225377542195/954347231446720512/headset.jpeg")
+            playEmbed.setImage("attachment://headset.png")
         } else {
             playEmbed.setTitle(`${escapeMarkdown(song.name)} - [${song.formattedDuration}]`)
             playEmbed.setFooter({ text: `${client.user.username} | ${status(queue)}` })
