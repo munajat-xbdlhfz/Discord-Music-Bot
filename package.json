@@ -13,7 +13,7 @@
   "dependencies": {
     "@discordjs/opus": "^0.9.0",
     "@distube/soundcloud": "^1.1.0",
-    "@distube/spotify": "^1.2.1",
+    "@distube/spotify": "^1.4.5",
     "@distube/yt-dlp": "^1.0.2",
     "@distube/ytdl-core": "^4.11.3",
     "ascii-table": "^0.0.9",
