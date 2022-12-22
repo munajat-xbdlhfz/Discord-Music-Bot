@@ -15,7 +15,7 @@
     "@distube/soundcloud": "^1.1.0",
     "@distube/spotify": "^1.2.1",
     "@distube/yt-dlp": "^1.0.2",
-    "@distube/ytdl-core": "^4.11.3",
+    "@distube/ytdl-core": "^4.11.7",
     "ascii-table": "^0.0.9",
     "canvas": "^2.10.2",
     "discord.js": "^13.12.0",
