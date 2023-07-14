@@ -6,4 +6,4 @@ module.exports = model(
         ChannelID: String,
         EmbedID: String,
     })
-);
+)

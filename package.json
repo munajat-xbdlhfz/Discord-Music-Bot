@@ -1,31 +1,25 @@
 {
-  "name": "music-discord-bot",
+  "name": "discord_music_bot",
   "version": "1.0.0",
-  "description": "Music Discord Bot",
-  "main": "main.js",
+  "description": "Discord music bot that supports playback from YouTube, Spotify, and SoundCloud.",
+  "main": "index.js",
   "scripts": {
-    "start": "node main.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
-  "author": "DARKZERO",
+  "author": "munajat-xbdlhfz",
   "license": "ISC",
   "dependencies": {
+    "@discord-player/extractor": "^4.3.1",
     "@discordjs/opus": "^0.9.0",
-    "@distube/soundcloud": "^1.1.0",
-    "@distube/spotify": "^1.2.1",
-    "@distube/yt-dlp": "^1.0.2",
-    "@distube/ytdl-core": "^4.11.3",
     "ascii-table": "^0.0.9",
-    "canvas": "^2.10.2",
-    "discord.js": "^13.12.0",
-    "distube": "^3.3.4",
-    "dotenv": "^16.0.1",
+    "discord-player": "^6.6.0",
+    "discord.js": "^14.11.0",
+    "dotenv": "^16.3.1",
     "ffmpeg-static": "^5.1.0",
-    "glob": "^8.0.3",
-    "libsodium-wrappers": "^0.7.10",
-    "mongoose": "^6.7.4",
-    "yt-search": "^2.10.3",
-    "ytdl-core": "^4.11.0"
+    "mongoose": "^7.3.1",
+    "play-dl": "^1.9.6",
+    "probe-image-size": "^7.2.3",
+    "ytdl-core": "^4.11.5"
   }
 }
