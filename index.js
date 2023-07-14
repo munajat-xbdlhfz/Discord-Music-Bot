@@ -74,7 +74,10 @@ client.player.events.on('disconnect', (queue, track) => {
     setMusicReply(client, queue, track)
 })
 
-client.player.events.on('error', (queue, error) => console.log(`[${queue.guild.name}] Error emitted from the queue: ${error.message}`))
+client.player.events.on('error', (queue, error) => {
+    console.log(`[${queue.guild.name}] Error emitted from the queue: ${error.message}`)
+    console.log(error)
+})
 
 // log in the client using the bot token
 client.login(process.env.BOT_TOKEN).then(() => {
