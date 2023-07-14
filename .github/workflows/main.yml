@@ -1,0 +1,30 @@
+name: Discord Music Bot
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v2
+        with:
+          node-version: 14
+
+      - name: Install dependencies
+        run: npm install
+
+      - name: Run Discord Music Bot
+        env:
+          BOT_TOKEN: ${{ secrets.BOT_TOKEN }}
+          DATABASE_URL: ${{ secrets.DATABASE_URL }}
+          DEVELOPER_GUILD: ${{ secrets.DEVELOPER_GUILD }}
+          MUSIC_DEFAULT_THUMBNAIL: ${{ secrets.MUSIC_DEFAULT_THUMBNAIL }}
+        run: npm start
